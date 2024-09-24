@@ -1,4 +1,9 @@
 export type PokedexTheme = "blue" | "red" | "yellow" | "green" | "purple";
+
+export type DamageRelation = {
+    double_damage_from: PokemonUri[]
+}
+
 export type PokemonUri = {
     name: string;
     url: string;
@@ -27,14 +32,6 @@ export type PokemonType = {
     };
 };
 
-export type PokemonWeakness = {
-    slot: number;
-    weakness: {
-        name: string;
-        url: string;
-    }
-}
-
 export type Pokemon = {
     id: number;
     name: string;
@@ -43,7 +40,7 @@ export type Pokemon = {
     weight: number;
     height: number;
     abilities: PokemonAbility[];
-    weakness: PokemonWeakness[];
+    weakness: DamageRelation[];
     sprites: {
         front_default: string;
     };

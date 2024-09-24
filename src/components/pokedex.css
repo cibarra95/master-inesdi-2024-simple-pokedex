@@ -176,6 +176,15 @@
     margin-top: 1rem;
 }
 
+
+.all-types-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Ajusta el tamaño según sea necesario */
+    gap: 10px; /* Espacio entre los elementos */
+    margin-top: 15px; /* Espacio superior para separar de la sección anterior */
+    margin-bottom: 15px;
+}
+
 .type-badge {
     padding: 0.5rem 1rem;
     border-radius: 12px;
@@ -264,6 +273,10 @@
 
 .type-badge.unknown {
     background-color: #68a090; /* Unknown */
+}
+
+.type-badge.shadow {
+    background-color: #300000; /* Unknown */
 }
 
 
