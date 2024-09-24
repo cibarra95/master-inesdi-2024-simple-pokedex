@@ -1,12 +1,15 @@
 @keyframes glow {
   0% {
     filter: brightness(1);
+    box-shadow: 0 0 5px var(--base-purple);
   }
   50% {
-    filter: brightness(1.5);
+    filter: brightness(1.8);
+    box-shadow: 0 0 15px var(--base-purple), 0 0 25px var(--base-purple);
   }
   100% {
     filter: brightness(1);
+    box-shadow: 0 0 5px var(--base-purple);
   }
 }
 
@@ -18,6 +21,11 @@
   display: inline-block;
   cursor: pointer;
   animation: none;
+  transition: transform 0.3s ease; /* Añadir transición para mejorar la interacción */
+}
+
+.led-display:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
 }
 
 .led-red {
@@ -35,7 +43,17 @@
   border: 2px solid var(--darker-blue);
 }
 
+.led-purple {
+  background-color: var(--dark-purple);
+  border: 2px solid var(--darker-purple);
+}
+
+.led-green {
+  background-color: var(--dark-green);
+  border: 2px solid var(--darker-green);
+}
+
 .led-display--active {
   animation: glow 4s infinite ease-in-out;
-  box-shadow: 0 0 12px #bdbdbdcc; /* subtle glow effect */
+  box-shadow: 0 0 12px #bdbdbdcc; /* Efecto de resplandor sutil */
 }

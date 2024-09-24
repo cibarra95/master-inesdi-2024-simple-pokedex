@@ -27,6 +27,16 @@ body {
   --dark-blue: #4a4a8f;
   --darker-blue: #2b2b6c;
 
+  --base-purple: #a47ae2;
+  --dark-purple: #6d4a9f;
+  --darker-purple: #4b2b6c;
+
+  --base-green: #5cc55c;
+  --dark-green: #2f8b2f;
+  --darker-green: #1c5d1c;
+
+
+
   --grey: #8f8f8f;
   --dark-grey: #6d6d6d;
 }
