@@ -110,8 +110,8 @@ export function Pokedex() {
     const {pokemon: nextPokemon} = usePokemon(pokemonList[i + 1]);
     const [team, setTeam] = useState<Pokemon[]>([]);
     const [selectedType, setSelectedType] = useState<string | null>(null);  // Nuevo estado para el tipo seleccionado
-
-    const sameTypePokemon = usePokemonSameType(selectedType || "");
+    
+    usePokemonSameType(selectedType || "");
     const prev = () => {
         resetTransition();
         setI(i === 0 ? pokemonList.length - 1 : i - 1);
