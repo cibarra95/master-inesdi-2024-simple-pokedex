@@ -1,36 +1,64 @@
 .button {
-  width: 60px;
-  height: 40px;
-  background-color: var(--grey);
-  border-radius: 10%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  cursor: pointer;
+    width: 60px;
+    height: 40px;
+    background-color: var(--grey);
+    border-radius: 10%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
 }
 
 .button:hover {
-  background-color: var(--dark-grey);
+    background-color: var(--dark-grey);
 }
 
 .button.prev::before,
-.button.next::before {
-  content: "";
-  position: absolute;
+.button.next::before,
+.button.add::before {
+    content: "";
+    position: absolute;
 }
 
 /* Prev button arrow pointing left */
 .button.prev::before {
-  border-style: solid;
-  border-width: 10px 20px 10px 0;
-  border-color: transparent #fff transparent transparent;
+    border-style: solid;
+    border-width: 10px 20px 10px 0;
+    border-color: transparent #fff transparent transparent;
 }
 
 /* Next button arrow pointing right */
 .button.next::before {
-  border-style: solid;
-  border-width: 10px 0 10px 20px;
-  border-color: transparent transparent transparent #fff;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #fff;
 }
+
+/* Icono "+" */
+.button.add::before {
+    width: 6px; /* Grosor de la barra vertical */
+    height: 20px; /* Altura de la barra vertical */
+    background-color: #fff; /* Color de la barra */
+}
+
+/* Barra horizontal del "+" */
+.button.add::after {
+    content: "";
+    position: absolute;
+    width: 20px; /* Ancho de la barra horizontal */
+    height: 6px; /* Grosor de la barra horizontal */
+    background-color: #fff; /* Color de la barra */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Centrando la barra vertical */
+.button.add::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

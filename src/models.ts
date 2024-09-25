@@ -1,5 +1,10 @@
 export type PokedexTheme = "blue" | "red" | "yellow" | "green" | "purple";
 
+export  type TypeEffectiveness = {
+    weakTo: string[];
+    strongAgainst: string[];
+};
+
 export type DamageRelation = {
     double_damage_from: PokemonUri[]
 }

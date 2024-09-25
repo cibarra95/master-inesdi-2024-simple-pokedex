@@ -12,7 +12,6 @@ export function usePokemon(pokemonUri: PokemonUri) {
             try {
                 const response = await fetch(pokemonUri.url);
                 const data = await response.json();
-                console.log(data);
                 cache.set(pokemonUri.url, data);
                 setPokemon(data);
             } catch (error) {

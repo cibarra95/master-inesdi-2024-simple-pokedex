@@ -1,6 +1,6 @@
 .pokedex {
-    width: 700px;
-    height: 360px;
+    width: 900px;
+    height: 680px;
 
     border-radius: 30px 8px 8px 30px;
     display: flex;
@@ -9,7 +9,7 @@
 }
 
 .pokedex:hover {
-    transform: scale(1.05); /* Efecto de hover para hacerlo más interactivo */
+    transform: scale(1.03); /* Efecto de hover para hacerlo más interactivo */
 }
 
 .pokedex-red {
@@ -47,7 +47,7 @@
 }
 
 .left-panel {
-    width: 60%;
+    width: 40%;
     height: 100%;
     border-right: 6px solid var(--dark-grey);
     padding: 10px 20px;
@@ -94,11 +94,21 @@
     justify-content: center; /* X */
 
     text-transform: uppercase;
-    font-size: larger;
+    font-size: initial;
     font-weight: 800;
 }
 
 .right-panel {
+    position: relative;
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-panel {
     position: relative;
     width: 40%;
     height: 100%;
@@ -116,6 +126,46 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+
+:root {
+    --base-red: #ff0000;
+    --darker-red: #990000;
+    --base-white: #ffffff;
+    --base-black: #000000;
+    --base-gray: #f0f0f0; /* Color de fondo alternativo */
+}
+
+.screen-pokeball {
+    width: 80%;
+    height: 100px; /* Altura para cada Pokémon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px; /* Bordes redondeados para simular el cilindro */
+    background: linear-gradient(to bottom, var(--base-red) 50%, var(--base-white) 50%);
+    border: 4px solid var(--darker-red);
+    margin: 10px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.screen-pokeball:hover {
+    transform: scale(1.05); /* Efecto de hover para hacerlo más interactivo */
+}
+
+.screen-pokeball img {
+    width: 70px; /* Tamaño de la imagen del Pokémon */
+    height: 70px; /* Tamaño de la imagen del Pokémon */
+    border-radius: 50%; /* Redondear la imagen */
+}
+
+.screen-pokeball span {
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--base-black);
+    text-transform: capitalize; /* Para capitalizar el texto del nombre */
 }
 
 .main-screen img {
